@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DETAIL</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap');
+        body{background-color:antiquewhite; font-family: 'Gaegu', cursive;}
+        h1{text-align:center; font-size: 35pt;}
+        #date{text-align:right; font-size: 20pt;}
+        #content{border:double; border-radius:4pt; font-size:15pt; text-align:center; border-width:4px; width:700px; height:400px; position:absolute; left:420px;}
+    </style>
+</head>
+<body>
+    <h1> {{diary.title}} </h1>
+    <p id="date">날짜<br>{{diary.pub_date}}</p>
+    <p id="content"><br>{{diary.body | linebreaksbr}}</p>
+</body>
+</html>

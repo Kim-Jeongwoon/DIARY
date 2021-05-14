@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>미리보기 페이지</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap');
+        body{background-color:antiquewhite; font-family: 'Gaegu', cursive;}
+        #dia{text-align:center;}
+    </style>
+</head>
+<body>
+    <h1 id=dia> ~ 일기장 ~ </h1>
+    <hr>
+    {% for diary in diarys.all %}
+    <h1> - {{diary.title}} - </h1>
+    <p> {{diary.pub_date}} </p>
+    <p><strong>미리보기 :</strong> {{diary.summary}}<a href="{%url 'detail' diary.id%}">...더보기</a></p>
+    <br><br>
+    {% endfor %}
+</body>
+</html>
