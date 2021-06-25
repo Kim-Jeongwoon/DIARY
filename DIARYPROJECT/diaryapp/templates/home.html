@@ -10,11 +10,13 @@
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap');
         body{background-color:antiquewhite; font-family: 'Gaegu', cursive;}
-        #dia{text-align:center;}
+        #dia{text-align:center; font-weight:bold;}
+        #pho{text-align:right; font-weight:bold;}
     </style>
 </head>
 <body>
     <h1 id=dia> ~ 일기장 ~ </h1>
+    <h6 id=pho><a href="http://127.0.0.1:8000/photo/">사진첩 보기</a>&nbsp;&nbsp;&nbsp;&nbsp;</h6>
     <hr>
     {% for diary in diarys.all %}
     <h1> - {{diary.title}} - </h1>
